@@ -26,7 +26,7 @@ int main() {
 
 	srand(std::time(0)); // rastgele sayi olusturdum
 	int hedefSayi;
-	hedefSayi = std::rand() % 100 + 1; // modunu alıp 0-100 araligina dusurdum
+	hedefSayi = std::rand() % 100 + 1; // modunu alÃ½p 0-100 araligina dusurdum
 
 	cout << "*** 0-100 Arasindaki Sayiyi Tahmin Etme Oyununa Hos Geldiniz ***\n";
 
@@ -53,7 +53,7 @@ int main() {
 				cout << "Dogru Tahmin: " << hedefSayi;
 				cout << endl;
 				(*pOyuncu1Skor)++; // Oyuncu 1 e bir puan ekler
-				std::this_thread::sleep_for(std::chrono::seconds(3)); // 3 saniye beklet
+				this_thread::sleep_for(chrono::seconds(3)); // 3 saniye beklet
 				system("CLS");
 				skorGoster(oyuncu1, oyuncu2, pOyuncu1Skor, pOyuncu2Skor);
 				hedefSayi = std::rand() % 100 + 1; // Yeni Sayi olusturuyor
@@ -73,7 +73,7 @@ int main() {
 				cout << "Dogru Tahmin: " << hedefSayi;
 				cout << endl;
 				(*pOyuncu2Skor)++;
-				std::this_thread::sleep_for(std::chrono::seconds(3)); // 3 saniye beklet
+				this_thread::sleep_for(chrono::seconds(3)); // 3 saniye beklet
 				system("CLS");
 				skorGoster(oyuncu1, oyuncu2, pOyuncu1Skor, pOyuncu2Skor);
 				hedefSayi = std::rand() % 100 + 1; // Sayi tahmin edildigi icin yeni tahmin olusturuyor
